@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #fffffe;
+    background-color: #fafafa;
 }
 
 header {
@@ -45,20 +45,45 @@ button:hover {
     cursor: pointer;
 }
 
-h3, p, button, select, label {
+h3, p, button, select, label, #log-in-message {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
-#log-in-form {
-    margin: 0 auto;
+#log-in-message {
+    padding-bottom: 10px;
+    color: #e65149;
+    font-weight: bold;
+    text-align: center;
 }
 
-select {
+.d-none {
+    display: none;
+}
+
+#log-in-form table {
+    margin: 10px auto 40px auto;
+}
+
+#log-in-form table td {
+    padding: 5px;
+}
+
+#log-in-button-row {
+    text-align: center;
+}
+
+select, input {
     border: 1px solid #41B3A3;
 }
 
 #logo-container {
     text-align: center;
+    display: block;
+}
+
+#logo-container img {
+    width: 6em;
+    height: 6em;
 }
 
 #log-in-container {
@@ -85,8 +110,9 @@ select {
     margin: 0 auto 2em auto;
     padding: 1em;
     text-align: center;
-    border: 1px solid #41B3A3;
+    border: 2px solid #41B3A3;
     border-radius: 6px;
+    background-color: #fffffe;
 }
 
 .product img {
