@@ -7,7 +7,7 @@ public class Customer {
     private Long customerId;
     private String fName;
     private String lName;
-    private LocalDate birthday;
+    private Date birthday;
     private String username;
     private String password;
 
@@ -35,11 +35,11 @@ public class Customer {
         this.lName = lName;
     }
 
-    public LocalDate getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDate birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 

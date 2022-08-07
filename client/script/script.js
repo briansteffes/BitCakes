@@ -2,11 +2,11 @@ const API_BASE = 'http://localhost:8080/';
 const productData = [];
 
 function displayItem(product) {
-    const main = document.getElementById('main');
+    const main = document.getElementById('inventory');
     const tmpl = document.getElementById('product-template').content.cloneNode(true);
-    tmpl.querySelector('h3').innerText = product.name;
-    tmpl.querySelector('img').setAttribute("src", product.url);
-    tmpl.querySelector('p').innerText = product.price;
+    tmpl.querySelector('h3').innerText = product.productName;
+    // tmpl.querySelector('img').setAttribute("src", product.url);
+    tmpl.querySelector('p').innerText = product.productPrice;
     main.appendChild(tmpl);
 }
 
