@@ -6,7 +6,7 @@ public class Product {
     private Long productId;
     private String productName;
     private int productCount;
-    private BigDecimal productPrice;
+private BigDecimal productPrice;
 
     public Long getProductId() {
         return productId;
