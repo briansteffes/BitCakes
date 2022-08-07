@@ -5,8 +5,9 @@ import java.math.BigDecimal;
 public class Product {
     private Long productId;
     private String productName;
+    private String productImgUrl;
     private int productCount;
-private BigDecimal productPrice;
+    private BigDecimal productPrice;
 
     public Long getProductId() {
         return productId;
@@ -22,6 +23,14 @@ private BigDecimal productPrice;
 
     public void setProductName(String productName) {
         this.productName = productName;
+    }
+
+    public String getProductImgUrl() {
+        return productImgUrl;
+    }
+
+    public void setProductImgUrl(String productImgUrl) {
+        this.productImgUrl = productImgUrl;
     }
 
     public int getProductCount() {

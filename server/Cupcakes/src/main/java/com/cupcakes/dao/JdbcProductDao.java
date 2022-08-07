@@ -44,14 +44,16 @@ public class JdbcProductDao implements ProductDao {
 
     @Override
     public boolean save(Product product) {
-        String sql = "insert into product (product_id, name, inventory, price) values (default, ?, ?, ?);";
-        return jdbcTemplate.update(sql, product.getProductName(), product.getProductCount(), product.getProductPrice()) == 1;
+        String sql = "insert into product (product_id, name, url, inventory, price) values (default, ?, ?, ?);";
+        return jdbcTemplate.update(sql, product.getProductName(), product.getProductImgUrl(),
+                product.getProductCount(), product.getProductPrice()) == 1;
     }
 
     @Override
     public boolean update(long id, Product product) {
-        String sql = "update product set name = ?, inventory = ?, price = ? where product_id = ?;";
-        return jdbcTemplate.update(sql, product.getProductName(), product.getProductCount(), product.getProductPrice(), id) == 1;
+        String sql = "update product set name = ?, url = ?, inventory = ?, price = ? where product_id = ?;";
+        return jdbcTemplate.update(sql, product.getProductName(), product.getProductImgUrl(),
+                product.getProductCount(), product.getProductPrice(), id) == 1;
     }
 
     @Override
@@ -67,6 +69,7 @@ public class JdbcProductDao implements ProductDao {
         Product product = new Product();
         product.setProductId(rs.getLong("product_id"));
         product.setProductName(rs.getString("name"));
+        product.setProductImgUrl(rs.getString("url"));
         product.setProductCount(rs.getInt("inventory"));
         product.setProductPrice(rs.getBigDecimal("price"));
         return product;

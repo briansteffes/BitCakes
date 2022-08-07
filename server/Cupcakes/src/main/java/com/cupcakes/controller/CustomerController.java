@@ -32,6 +32,12 @@ public class CustomerController {
         return customerDao.get(id);
     }
 
+//    @ResponseStatus(HttpStatus.ACCEPTED)
+//    @RequestMapping(path="")
+//    public boolean authenticateCustomer(@RequestParam String username, @RequestParam String password) {
+//        return false;
+//    }
+
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(path="", method=RequestMethod.POST)
     public boolean addCustomer(@RequestBody Customer customer) {

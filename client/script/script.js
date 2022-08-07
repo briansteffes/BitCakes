@@ -6,7 +6,7 @@ function displayItem(product) {
     const main = document.getElementById('inventory');
     const tmpl = document.getElementById('product-template').content.cloneNode(true);
     tmpl.querySelector('h3').innerText = product.productName;
-    tmpl.querySelector('img').setAttribute("src", product.url);
+    tmpl.querySelector('img').setAttribute("src", product.productImgUrl);
     tmpl.querySelector('p').innerText = product.productPrice;
     main.appendChild(tmpl);
 }
